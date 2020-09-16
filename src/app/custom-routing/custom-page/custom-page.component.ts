@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductNameNormalizer } from './product-name-normalizer';
 
 @Component({
   selector: 'app-custom-page',
@@ -7,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CustomPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private productNameNormalizer: ProductNameNormalizer) {
+  }
 
   ngOnInit(): void {
   }
