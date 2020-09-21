@@ -69,7 +69,13 @@ export abstract class DebugConfig {
     ),
     CustomRoutingModule
   ],
-  providers: [{ provide: DebugConfig, useExisting: Config }],
+  providers: [{ provide: DebugConfig, useExisting: Config },
+    /*{
+      provide: CurrentProductService, useClass: MyCurrentProductService
+    }*/
+  ],
+  // { provide: ProductAdapter, useClass: MyProductAdapter }],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,8 +1,14 @@
-<p>begin of my image!</p>
 <!--
+<p>begin of my image!</p>
+
 <img [src]="
  'https://spartacus-dev0.eastus.cloudapp.azure.com:9002' + 
  (data.data$ | async).media.desktop.url
  " />
--->
+
 <p>end of my image!</p>
+-->
+
+<h1>{{ productName$ | async }} </h1>
+
+<h1>{{ quantity$ | async | json }} </h1>
