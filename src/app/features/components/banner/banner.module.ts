@@ -1,6 +1,5 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { CmsConfig, ConfigModule } from '@spartacus/core';
 import { MediaModule } from '@spartacus/storefront';
 import { CustomBannerComponent } from './banner.component';
 
@@ -8,15 +7,8 @@ import { CustomBannerComponent } from './banner.component';
   declarations: [CustomBannerComponent],
   imports: [
     CommonModule,
-    MediaModule,
-    ConfigModule.withConfig({
-      cmsComponents: {
-        SimpleResponsiveBannerComponent: {
-          component: CustomBannerComponent,
-        },
-      },
-    } as CmsConfig),
+    MediaModule
   ],
   entryComponents: [CustomBannerComponent],
 })
-export class CustomBannerModule {}
+export class CustomBannerModule { }
